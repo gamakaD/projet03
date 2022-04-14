@@ -1,0 +1,13 @@
+@media (min-width: 768px){
+    
+    
+    .explanation-section ol{
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+        padding-left: 0;
+    }
+
+    .cards-wrapper{
+        grid-template-columns: 1fr 1fr;
+    }
+}

@@ -1,0 +1,39 @@
+@media (min-width: 768px){
+
+    .menus-section__title{
+        padding-inline: 4rem;
+        h5{
+           font-size: 2rem; 
+        }
+        .heart{
+            font-size: 3rem;
+        }
+    }
+    .menus-form{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .menu-wrapper{
+        width: 45%;
+    }
+    .menu-title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .title-underscore{
+        width: 50%;
+    }
+    
+    .background-img{
+        aspect-ratio: 4/2;
+
+        .img{
+            transform: translateY(-20%);
+        }
+        
+    }
+}

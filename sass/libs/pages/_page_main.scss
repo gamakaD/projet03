@@ -1,0 +1,27 @@
+.page-main{
+    overflow: hidden;
+    max-width: 1140px;
+    margin: 0 auto;
+    background-color: $clr-light-gray;
+}
+
+.background-img{
+    width: 100%;
+    overflow: hidden;
+    aspect-ratio: 4/2.6;
+}
+
+.img{
+    max-width: 100%;
+    object-fit: contain; 
+    object-position: center;
+    
+}
+
+.translate-position{
+    transform: translateY(-20%);
+}
+
+.page-heart{
+    width: 2.2rem;
+}
