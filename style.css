@@ -7,10 +7,8 @@
  */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 html {
-  line-height: 1.15;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections
@@ -64,14 +62,10 @@ img {
  */
 button,
 input {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
 }
 
 /**
@@ -79,8 +73,7 @@ input {
  * 1. Show the overflow in Edge.
  */
 button,
-input {
-  /* 1 */
+input { /* 1 */
   overflow: visible;
 }
 
@@ -88,8 +81,7 @@ input {
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
  */
-button {
-  /* 1 */
+button { /* 1 */
   text-transform: none;
 }
 
@@ -123,10 +115,8 @@ button:-moz-focusring,
  * 2. Remove the padding in IE 10.
  */
 [type=checkbox] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
 }
 
 * {
@@ -187,16 +177,27 @@ input[type=checkbox] {
     text-shadow: 1px 1px 1px #9356DC;
   }
 }
+@keyframes loader-out {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
 .loader {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 2;
+  opacity: 0.9;
   background: linear-gradient(#9356DC, #FF79DA, #99E2D0);
+  animation: loader-out 500ms 4s forwards;
 }
 
 .letter {
@@ -205,12 +206,7 @@ input[type=checkbox] {
   font-family: "Shrikhand";
   color: #9356DC;
   text-shadow: 5px 2px 2px #353535;
-  animation: letter-move 1.8s ease-in-out infinite;
-}
-
-.loading-out {
-  display: none;
-  transform: translateY(-100%);
+  animation: letter-move 1600ms ease-in-out infinite;
 }
 
 .letter:nth-child(2) {
@@ -488,7 +484,6 @@ input[type=checkbox] {
     flex-direction: row;
     gap: 2rem;
   }
-
   .footer__item__title {
     margin: 0 auto;
   }
@@ -714,7 +709,6 @@ input[type=checkbox] {
     gap: 2rem;
     padding-left: 0;
   }
-
   .cards-wrapper {
     grid-template-columns: 1fr 1fr;
   }
@@ -729,29 +723,24 @@ input[type=checkbox] {
   .menus-section__title .heart {
     font-size: 3rem;
   }
-
   .menus-form {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 1rem;
   }
-
   .menu-wrapper {
     width: 45%;
   }
-
   .menu-title {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
   }
-
   .title-underscore {
     width: 50%;
   }
-
   .background-img {
     aspect-ratio: 4/2;
   }

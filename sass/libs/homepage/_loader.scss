@@ -1,4 +1,3 @@
-
 @keyframes letter-move{
     0%{
         font-size: inherit;
@@ -44,19 +43,29 @@
     }
 }
 
-.loader{
-    display: flex;
-    // flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    background: linear-gradient($primary, $secondary, $tertiary);                
+@keyframes loader-out {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+        border-radius: 50%;
+    }
 }
 
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+    opacity: .9;
+    background: linear-gradient($primary, $secondary, $tertiary);
+    animation: loader-out 500ms 4s forwards;           
+}
 
 .letter{
     display: flex;
@@ -64,14 +73,8 @@
     font-family: $font-logo;
     color: #{$primary}            ;
     text-shadow: 5px 2px 2px #{$clr-dark-gray};
-    animation: letter-move 1.8s ease-in-out infinite;
+    animation: letter-move 1600ms ease-in-out infinite;
 }
-
-.loading-out{
-    display: none;
-    transform: translateY(-100%);
-}
-
 
 .letter:nth-child(2){
     animation-delay: .1s;
