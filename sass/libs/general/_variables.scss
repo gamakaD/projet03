@@ -10,6 +10,7 @@ $clr-light-gray: #F6F6F6;
 
 
 
+
 // FONTS
 
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
@@ -21,3 +22,11 @@ $font-global: "roboto";
 $menu-btn-height: 70px;
 $item-number-3: 3;
 $item-number-4: 4;
+
+// MIXIN
+
+@mixin btn-hover {
+    cursor: pointer;
+    background: linear-gradient(lighten($secondary, 2%), lighten($primary, 3%));
+    box-shadow: -2px 8px 9px rgba($color: #000000, $alpha: 0.5);
+}
